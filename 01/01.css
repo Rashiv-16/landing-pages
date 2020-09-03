@@ -58,7 +58,7 @@ a {
     display: grid;
     place-items: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url('back1.jpg');
+    url('back.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
