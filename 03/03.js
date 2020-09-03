@@ -5,7 +5,6 @@ linkHighlight = (e) => {
         link.classList.remove('link-current')
     })
     e.target.classList.add('link-current')
-    console.log(e.target)
 }
 
 links.forEach((link) => {

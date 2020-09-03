@@ -104,7 +104,7 @@ a::after {
 
 a:hover::after {
     transform: translateY(100%);
-    opacity: 0;
+    /* opacity: 0; */
 }
 
 footer {
