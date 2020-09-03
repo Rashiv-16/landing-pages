@@ -1,0 +1,11 @@
+{
+  "name": "landing-pages",
+  "version": "1.0.0",
+  "description": "A collection of landing pages I have made from my own creativity and the things I came across online.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Yadav",
+  "license": "ISC"
+}
