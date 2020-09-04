@@ -225,7 +225,7 @@ a:link, a:visited {
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
     .logo, .contacts, .skills {
         width: 350px;
     }
