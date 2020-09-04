@@ -9,6 +9,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -32,6 +33,20 @@ body {
     transition: background-color 2s linear;
 
 }
+
+.home, .skill, .about, .contact {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
+}
+
+
 
 #switch {
     /* fill: #727272; */
@@ -107,30 +122,6 @@ a:link, a:visited {
                     -0.2px -0.2px 0.2px #333;
 }
 
-section {
-    width: 100%;
-    height: 100vh;
-
-    color: #333;
-
-    display: flex;
-    place-content: center;
-    place-items: center;
-
-}
-
-#home, #skill, #about, #contact {
-    width: 100vw;
-    height: 100vh;
-}
-
-#home{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .logo {
     width: 500px;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.8));
@@ -138,8 +129,6 @@ section {
 
 .skill-content, .about-content, .contact-content {
     border: 25px solid #333;
-    /* border-top-right-radius: 45px;
-    border-bottom-left-radius: 45px; */
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 
     width: 550px;
@@ -182,17 +171,6 @@ section {
 }
 
 @media screen and (max-width: 700px) {
-    body {
-        display: flex;
-        flex-flow: column wrap;
-        width: 100vw;
-    }
-
-    #home, #skill, #about, #contact {
-        width: 100vw;
-        height: 100vh;
-    }
-
     .sun-moon {
         width: fit-content;
     
@@ -217,17 +195,12 @@ section {
     }
 
     .logo {
-        width: 300px;
+        width: 400px;
     }
 
     .skill-content {
         border: none;
         box-shadow: none;
-    }
-
-    .skills {
-        width: 350px;
-        height: 350px;
     }
     
     .about-p {
