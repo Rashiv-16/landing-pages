@@ -1,5 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const links = document.querySelectorAll('a')
+    const links = document.querySelectorAll('a');
+    const dayNights = document.querySelectorAll('.day-night');
+    const dayNightsContainer = document.querySelector('.fixed-corrector-1')
+    const body = document.querySelector('body')
 
     linkHighlight = (e) => {
         links.forEach((link) => {
@@ -12,5 +15,17 @@ window.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', linkHighlight);
     })
 
-    const dayNight = document.querySelectorAll('day-night');
+    dayNightHandler = (e) => {
+        dayNights.forEach((dayNight) => {
+            dayNight.classList.toggle('no-display')
+        })
+        links.forEach((link) => {
+            link.classList.toggle('link-color')
+        })
+
+        body.classList.toggle('body-background')
+    }
+
+    dayNightsContainer.addEventListener('click', dayNightHandler)
+
 })

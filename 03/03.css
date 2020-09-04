@@ -30,8 +30,11 @@ body {
 
     overflow: hidden;
 
-    transition: background-color 2s linear;
+    transition: background-color 1s linear;
+}
 
+.body-background {
+    background-color: rgb(110, 110, 110);
 }
 
 .home, .skill, .about, .contact {
@@ -66,22 +69,32 @@ body {
     position: absolute;
     bottom: 70px;
     right: 85px;
+    width: 40px;
+    height: 40px;
 }
 
 .fixed-corrector-1 {
     position: fixed;
-    width: max-content;
-    height: max-content;
+    width: 40px;
+    height: 40px;
 }
 
 .complete-sun, .moon {
     position: absolute;
     width: 40px;
     height: 40px;
+    z-index: 2;
+
+    transition: opacity 1s ease-in;
 }
 
 .day-night:hover {
     cursor: pointer;
+}
+
+.no-display {
+    opacity: 0;
+    z-index: 1;
 }
 
 .navigation {
@@ -118,6 +131,10 @@ a:link, a:visited {
     font-family: 'Lato', sans-serif;
 
 
+}
+
+.link-color {
+    color: #525252 !important;
 }
 
 .link-current {
