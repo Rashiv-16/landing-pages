@@ -184,7 +184,7 @@ a:link, a:visited {
     }
 
     .navigation {
-        top: 93vh;
+        top: 91vh;
         left: 50%;
     }
 
@@ -232,6 +232,6 @@ a:link, a:visited {
     .about-p {
         font-size: 25px;
         padding: 50px;
-        text-align: justify;
+        text-align: center;
     }
 }
