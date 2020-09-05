@@ -67,8 +67,8 @@ body {
     width: fit-content;
 
     position: absolute;
-    bottom: 70px;
-    right: 85px;
+    bottom: 50px;
+    right: 50px;
     width: 40px;
     height: 40px;
 }
@@ -198,7 +198,7 @@ a:link, a:visited {
     
         position: absolute;
         top: 6vh;
-        right: 12vw;
+        right: 14vw;
     }
 
     .navigation {
@@ -249,7 +249,7 @@ a:link, a:visited {
     }
 
     .about-p {
-        font-size: 40px;
+        font-size: 30px;
         padding: 30px;
         text-align: center;
     }
