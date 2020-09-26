@@ -683,3 +683,42 @@ p, li {
         fill: #53656E;
     }
 }
+
+@media screen and (max-width: 500px) {
+
+    .main-text-container {
+        height: 180px;
+    
+        margin-left: 20px;
+    }
+
+    .main-text {
+        font-size: 50px;
+    }
+    
+    .main-text > span {
+        font-size: 74px;
+    } 
+    .packs-text {
+        font-size: 38px;
+    }
+
+    .reviews > div {
+        padding:  0 50px;
+    }
+
+    .footer-left > p, .footer-left > ul > li, .footer-right > p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #6a6b6b;
+    }
+    
+    .footer-left > ul > li > a {
+        color: #6a6b6b;
+    }
+
+    .logo, .call, .location, .person {
+        fill: #53656E;
+        height: 20px;
+    }
+}
