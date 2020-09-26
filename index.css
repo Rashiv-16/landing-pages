@@ -81,7 +81,8 @@ a:active {
 }
 
 .one {
-    background-image: url('img/south-park-tourism.jpg');
+    background-image: url('img/discover-nature.jpg');
+    background-position: 0 100%;
 }
 .two {
     background-image: url('img/covid-19.jpg');

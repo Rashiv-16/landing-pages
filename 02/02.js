@@ -34,14 +34,14 @@ getHeight = () => {
             back.classList.add('opacity-one')
             back.style.transform = 'rotateY(360deg)'
             back.style.transition = `opacity 1s linear 3.5s, transform 1s ease ${time}s`
-            time = time + 1
+            time = time + 0.8
         })
 
         time = 4.5 
         fronts.forEach((front) => {
             front.style.transform = 'rotateY(180deg)'
             front.style.transition = `transform 1s ease ${time}s`
-            time = time + 1
+            time = time + 0.8
         })
     } else {
         guidelinesHeading.classList.remove('opacity-zero');
@@ -56,7 +56,6 @@ getHeight = () => {
             front.style.transform = 'rotateY(0)'
             front.style.transition = `none`
         })
-        console.log(1)
     }
 
 }
