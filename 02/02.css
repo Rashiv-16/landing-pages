@@ -11,388 +11,165 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
-/* 
-html {
-    scroll-behavior: smooth;
-    
-    scroll-snap-type: y mandatory;
 
-} */
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
-    font-family: 'Raleway', sans-serif;
-
-
-    display: flex;
-    flex-flow: column wrap;
-    /* max-width: 1000px; */
-
-}
-
-p {
     font-family: 'Roboto Mono', sans-serif;
-}
 
-main {
-    /* background-color: lawngreen; */
-
-    width: 100%;
-    height: 100%;
-
+    height: max-content;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #ffe1e1;
     position: relative;
-
-
 }
 
-nav {
+.auto-logo-container {
+    width: 150px;
     position: absolute;
+    transform: rotateZ(-5deg);
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 0px;
 }
 
-nav > ul {
-    background-color: rgba(4, 21, 77, 0.137);
+.auto-logo {
+    stroke: #b83434;
+    stroke-width: 1.25px;
+    fill: none;
+    filter: drop-shadow(0 0 3px rgb(255, 0, 0));
+}
+
+.navbar {
+    height: 100px;
+    margin-top: 30px;
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-    
-    height: 50px;
+
     padding-right: 50px;
+
 }
 
-nav > ul > li {
-    margin: 0 20px;
-    list-style: none;
-}
-
-nav a:link, nav a:visited {
+.navbar > a, .navbar > a:visited {
+    /* border: 1px solid red; */
+    margin-right: 50px;
     text-decoration: none;
-    color: #2a2a2a;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-
-
-.covid-logo {
-    width: 100px;
-    background: radial-gradient(rgba(24, 122, 0, 0.589), transparent 70%);
-    
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.logo-container > h1 {
-    color: rgb(0, 71, 0);
-    font-size: 10px;
-    margin-top: 3px;
-}
-
-.feet, .apart {
-    font-size: 100px;
-    font-weight: 700;
-    color: red;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-    opacity: 0;
-}
-
-.feet {
-    transition: all 1s ease-out;
-    transition-delay: 0.7s;
-}
-
-.apart {
-    transition: all 1s ease-out;
-    transition-delay: 1.7s;
-}
-
-.feet1 {
-    top: 35%;
-    color: #333333;
-    opacity: 100;
-}
-
-.apart1 {
-    top: 65%;
-    color: #333333;
-    opacity: 100;
-}
-
-#home {
-    background: url(bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    
-    width: 100%;
-    height: 100vh;
-
-    position: relative;
-
-}
-
-
-#overview {
-    background-color: white;
-
-    
-
-    background: linear-gradient(to bottom, transparent, rgb(41, 171, 226)), url(covid.png);
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-
-    z-index: -5;
-
-    padding:80px 50px;
-}
-
-#overview h3, #guidelines h3 {
-    
-    font-size: 60px;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    border: 5px solid #222;
-
-    color: #333;
-
-    padding: 10px;
-    position: relative;
-
-    z-index: 1;
-
-}
-
-#overview h3::after, #guidelines h3::after {
-    content: "";
-
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    width: 120%;
-    height: 80%;
-
-    transform: translate(-50%, -50%);
-    
-    box-sizing: content-box;
-    background-color: rgb(41, 171, 226);
-
-    z-index: -1;
-
-}
-
-#overview > p {
-
-    flex-grow: 2;
-    text-align: justify;
+    color: rgb(180, 180, 180);
+    color: #970000;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
     display: flex;
-    place-items: center;
-
-    font-size: 30px;
-    line-height: 1.9;
-
-    padding: 40px;
-}
-
-#guidelines {
-
-
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
     justify-content: center;
 
-    background-color: rgb(41, 171, 226);
-
-    position: relative;
-
-
+    transition: 0.3s color ease;
 }
 
-
-#guidelines h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    transition: opacity 1s linear;
-    transition-delay: 0.7s;
-
+.navbar > a:active {
+    color: #580000;
 }
 
-#guidelines h3::before {
-    content: "";
-
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    width: 93.5%;
-    height: 120%;
-
-    transform: translate(-50%, -50%);
-    
-    box-sizing: content-box;
-    background-color: rgb(41, 171, 226);
-
-    z-index: -1;
-
+.login-svg {
+    width: 25px;
+    height: 25px;
+    fill: #970000;
+    transition: 0.3s fill ease;
 }
 
-#guidelines h3::after {
-    background-color: rgb(41, 171, 226);
+.login-svg:active {
+    fill: #580000;
 }
 
-.cards {
-    width: 250px;
-    height: 400px;
-
-    margin: 30px;
-
-
-    position: relative;
-
-    z-index: 1;
-
-    transform-style: preserve-3d;
-    transform: perspective(1500px);
-
-    opacity: 0;
-
-    transition: all 2s ease;
-    transition-delay: 1.5s;
-    
-}
-
-.front-1, .front-2, .front-3, .front-4, .front-5, .front-6 {
+header {
+    margin-top: 50px;
     display: flex;
-    place-items: center;
-    place-content: center;
-    background-color: rgb(30, 135, 255);
-
-    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493); */
+    flex-flow: row nowrap;
+    height: 730px;
 }
 
-.front-1 p, .front-2 p, .front-3 p, .front-4 p, .front-5 p, .front-6 p {
-    font-family:'Roboto', sans-serif;
-    font-size: 140px;
-    color: #333;
+header > div {
+    width: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.front-1, .front-2, .front-3, .front-4, .front-5, .front-6, .back-1, .back-2, .back-3, .back-4, .back-5, .back-6 {
+.intro {
+    height: 600px;
+    /* align-self: center; */
+}
+
+h1 {
+    font-size: 160px;
+
+}
+
+header > div > p {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.get-started {
+    margin-top: 40px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    padding: 20px;
+    background-color: red;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    width: 220px;
+    transition: 0.3s background ease;
+}
+
+.get-started > span {
+    position: absolute;
+    transition: 0.3s transform ease-in;
+}
+
+.get-started > span {
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
+}
+
+.get-started:hover .shot {
+    transform: translateY(-50%) translateX(10px);
+}
+
+.get-started:active {
+    background-color: rgba(255, 0, 0, 0.815);
+}
+
+.intro-showcase {
+    position: relative;
+
+    position: relative;
+}
+
+.triangle-design {
+    width: max-content;
+    height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+
+}
+
+.triangle-design-svg {
     height: 100%;
-    border-radius: 5px;
-
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.493);
-    /* backface-visibility: hidden; */
-}
-
-.back-1, .back-2, .back-3, .back-4, .back-5, .back-6 {
-    background: linear-gradient(to right top, rgb(0, 119, 255), rgb(41, 171, 226));
-    transform: rotateY(180deg);
-
-    display: flex;
-    flex-flow: column nowrap;
-
-    align-items: center;
-    justify-content: center;
-
-    opacity: 0;
-    transition: 3.5s opacity 1s linear;
-}
-
-.st0 {
-    fill: #111E6C;
-}
-
-.back-6 div, .back-5 div, .back-4 div, .back-3 div, .back-2 div, .back-1 div {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.back-6 p , .back-5 p, .back-4 p, .back-3 p, .back-2 p, .back-1 p{
-    margin-top: 60px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.monitor, .disinfect, .cover, .mask, .distance, .hands{
-    width: 100px;
-}
-
-
-#who {
-    background-color: #111E6C;
-
-
-}
-
-#contact {
-    background-color: #0C154A;
-
-
-}
-
-section {
-    scroll-snap-align: start;
-
-    width: 100%;
-    min-height: 100vh;
-}
-
-footer {
-    background-color: #080E33;
-    display: flex;
-    flex-flow: column nowrap;
-    place-items: center;
-
-    padding: 20px;
-}
-
-footer h4 {
-    font-family:'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 20px;
-    color: whitesmoke;
-    text-shadow: 0 0 20px #0099ff;
-    margin: 10px;
-}
-
-.opacity-zero {
-    opacity: 0;
-}
-
-.opacity-one {
-    opacity: 1;
+    fill: #970000;
+    filter: drop-shadow(-0.5px 0 10px #2900007c);
 }

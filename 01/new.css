@@ -92,7 +92,8 @@ main {
     align-self: flex-start;
     margin-left: 50px;
     font-size: 50px;
-    border: 5px solid black;
+    border-left: 20px solid black;
+    padding-left: 10px;
 
     color: #00311a;
     text-transform: uppercase;
@@ -101,7 +102,7 @@ main {
     z-index: 2;
 }
 
-.packs-text::before {
+/* .packs-text::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -114,7 +115,7 @@ main {
     box-sizing: content-box;
 
     background-color: #E5F5F9;
-}
+} */
 
 .packs-container {
     width: 100%;
