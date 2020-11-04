@@ -274,11 +274,23 @@ main {
 }
 
 main > div {
-    height: 600px;
+    height: max-content;
     max-width: 1400px;
     margin: 0 auto;
     border: 1px solid red;
 
+}
+
+.news-container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80%;
+    border: 1px solid greenyellow;
+}
+
+.news-container > div {
+    height: 300px;
+    width: 100%;
 }
 
 
@@ -455,7 +467,7 @@ footer > div > input {
 
     .image-container1, .image-container2, .image-container3 {
         background-position: 100% 40%;
-        background-size: 80%;
+        background-size: 90%;
     }
     .image-container2, .image-container3 {
         background-position: 90% 40%;
@@ -476,6 +488,12 @@ footer > div > input {
 
 @media screen and (max-width: 700px) {
 
+    h1 {
+        font-size: 140px;
+    }
+    header > div > p {
+        font-size: 18px;
+    }
     .auto-logo-container {
         width: 100px;
     }
