@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
 
 
+
 * {
     padding: 0;
     margin: 0;
@@ -28,6 +29,7 @@ body {
     height: max-content;
     max-width: 1920px;
     margin: 0 auto;
+    padding:  30px 0;
     background-color: #ffe1e1;
     position: relative;
 }
@@ -36,7 +38,7 @@ body {
     width: 150px;
     position: absolute;
     transform: rotateZ(-5deg);
-    top: 0;
+    top: 30px;
     left: 0px;
 }
 
@@ -95,12 +97,16 @@ header {
     margin-top: 50px;
     display: flex;
     flex-flow: row nowrap;
-    height: 730px;
+    min-height: 730px;
+    /* max-height: 800px; */
+    height: calc(100vh - 210px);
+    /* border: 1px solid red; */
 }
 
 header > div {
     width: 50%;
-
+    
+    /* border: 1px solid black; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -108,12 +114,20 @@ header > div {
 }
 
 .intro {
+    /* border: 1px solid blue; */
     height: 600px;
+    width: 50%;
+    min-height: 350px;
+
+    /* margin-top: 100px; */
+
     /* align-self: center; */
+    align-self: flex-start;
 }
 
 h1 {
     font-size: 160px;
+    font-weight: 700;
 
 }
 
@@ -155,21 +169,158 @@ header > div > p {
 
 .intro-showcase {
     position: relative;
-
-    position: relative;
+    height: 100%;
+    /* min-height: 900px; */
+    width: 50%;
+    /* border: 1px solid greenyellow; */
 }
 
 .triangle-design {
-    width: max-content;
     height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
 
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
 }
 
 .triangle-design-svg {
     height: 100%;
     fill: #970000;
     filter: drop-shadow(-0.5px 0 10px #2900007c);
+}
+
+.slider-container {
+    /* border: 1px solid greenyellow; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    transition: 0.3s opacity ease;
+
+}
+
+.current-slide {
+    opacity: 1;
+}
+
+.image-container1, .image-container2, .image-container3 {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 70%;
+    background-size: 85%;
+    transform: translateX(50%);
+    opacity: 0;
+    
+    transition: 0.3s transform 0.5s ease, 0.3s opacity 0.5s ease;
+}
+
+.current-image {
+    opacity: 1;
+    transform: translateX(0);
+    
+}
+
+.image-container1 {
+    background-image: url('album/mercedes.png');
+}
+.image-container2 {
+    background-image: url('album/hyundai.png');
+    background-size: 95%;
+}
+.image-container3 {
+    background-size: 95%;
+    background-image: url('album/audi.png');
+}
+
+.company-name {
+    position: absolute;
+    height: 100px;
+    bottom: 0;
+    left: 50%;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.246),  transparent);
+    width: 30%;
+    transform: translateX(-50%);
+    color: black;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    /* opacity: 0; */
+}
+
+@media screen and (max-width: 1500px) {
+    header {
+        flex-flow: column nowrap;
+        /* min-height: 730px; */
+        /* max-height: 800px; */
+        height: max-content;
+    }
+    
+    .intro {
+        width: 100%;
+        height: calc(100vh - 210px);
+    }
+    
+    header > div {
+        width: 100%;
+    }
+    
+    .intro-showcase {
+        height: 100vh;
+        min-height: 600px;
+        width: 100%;
+        align-self: flex-end;
+    }
+    .triangle-design {
+        min-height: 600px;
+        height: 100vh;
+        align-self: flex-end;
+    }
+
+    .image-container1, .image-container2, .image-container3 {
+        background-position: 100% 60%;
+        background-size: 80%;
+    }
+    .image-container2, .image-container3 {
+        background-position: 90% 60%;
+        background-size: 90%;
+    }
+
+    .company-name {
+        bottom: 0;
+        left: unset;
+        right: 0;
+        transform: translateX(0);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.246),  #970000);
+        width: 85%;
+        text-align: start;
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        padding-right: 0;
+    
+    }
+    .navbar > a, .navbar > a:visited {
+        /* border: 1px solid red; */
+        margin-right: 20px;
+    }
 }
