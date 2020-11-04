@@ -264,6 +264,92 @@ header > div > p {
     /* opacity: 0; */
 }
 
+main {
+    height: 600px;
+    border: 1px solid black;
+}
+
+.browse {
+    height: max-content;
+}
+
+.browse > h3 {
+    margin: 0 20px 0 20px;
+    padding: 10px;
+    background: linear-gradient(to right, #970000, transparent);
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.styles {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    margin: 20px auto;
+    max-width: 1400px;
+}
+
+.styles > div {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    /* border: 1px solid red; */
+}
+
+.styles > div > div {
+    height: 184px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+}
+
+.sedan {
+    background-image: url('styles/SEDAN.png');
+}
+.truck {
+    background-image: url('styles/TRUCKS.png');
+}
+.suv {
+    background-image: url('styles/SUVCROSS.png');
+}
+.coupe {
+    background-image: url('styles/COUPE.png');
+}
+.hatchback {
+    background-image: url('styles/HATCH.png');
+}
+.van {
+    background-image: url('styles/VANMV.png');
+}
+.convert {
+    background-image: url('styles/CONVERT.png');
+}
+.wagon {
+    background-image: url('styles/WAGON.png');
+}
+.awd {
+    background-image: url('styles/AWD4WD.png');
+}
+.luxury {
+    background-image: url('styles/LUXURY.png');
+}
+.hybrid {
+    background-image: url('styles/HYBEL.png');
+}
+.commercial {
+    background-image: url('styles/COMMERCIAL.png');
+}
+
+.styles > div > p {
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: -30px;
+}
+
 @media screen and (max-width: 1500px) {
     header {
         flex-flow: column nowrap;
