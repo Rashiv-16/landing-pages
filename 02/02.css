@@ -134,6 +134,7 @@ h1 {
 header > div > p {
     font-size: 20px;
     letter-spacing: 1px;
+    text-transform: capitalize;
 }
 .get-started {
     margin-top: 40px;
@@ -266,9 +267,7 @@ header > div > p {
 
 main {
     height: max-content;
-    margin-top: 50px;
-    border: 1px solid red;
-    
+    margin-top: 100px;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -277,22 +276,67 @@ main > div {
     height: max-content;
     max-width: 1400px;
     margin: 0 auto;
-    border: 1px solid red;
-
 }
 
 .news-container {
     display: flex;
     flex-flow: column nowrap;
-    width: 80%;
-    border: 1px solid greenyellow;
+    padding: 0 20px;
+    overflow-x: hidden;
 }
 
 .news-container > div {
-    height: 300px;
-    width: 100%;
+    max-height: 500px;
+    height: 100vh;
 }
 
+.news-container h6 {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.news-container p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: grey;
+}
+
+.news1, .news2, .news3, .news4, .news5 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.news1-text, .news2-text, .news3-text, .news4-text, .news5-text {
+    width: 40%;
+}
+
+.news1-image, .news2-image, .news3-image, .news4-image, .news5-image {
+    width: 55%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.news1-image {
+    background-image: url('news/news1.jpg');
+}
+.news2-image {
+    background-image: url('news/news2.jpg');
+}
+.news3-image {
+    background-image: url('news/news3.jpg');
+}
+.news4-image {
+    background-image: url('news/news4.jpg');
+}
+.news5-image {
+    background-image: url('news/news5.jpg');
+}
 
 main > a, .browse > h3 {
     margin: 0 20px 0 20px;
@@ -436,7 +480,7 @@ footer > div > input {
     margin: 0 10px;
 }
 
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1400px) {
     header {
         flex-flow: column nowrap;
         /* min-height: 730px; */
@@ -463,6 +507,34 @@ footer > div > input {
         min-height: 600px;
         height: 80vh;
         align-self: flex-end;
+    }
+
+    main {
+        margin-top: 50px;
+    }
+
+    .news-container > div {
+        max-height: 600px;
+        height: 100vh;
+    }
+
+    .news1, .news2, .news3, .news4, .news5 {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .news1-text, .news2-text, .news3-text, .news4-text, .news5-text {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    .news1-image, .news2-image, .news3-image, .news4-image, .news5-image {
+        width: 80%;
+    }
+
+    .news2-image, .news4-image {
+        order: 2;
     }
 
     .image-container1, .image-container2, .image-container3 {
@@ -505,5 +577,21 @@ footer > div > input {
         /* border: 1px solid red; */
         margin-right: 20px;
         font-size: 15px;
+    }
+
+    .news1-text, .news2-text, .news3-text, .news4-text, .news5-text {
+        width: 95%;
+    }
+    .news1-image, .news2-image, .news3-image, .news4-image, .news5-image {
+        width: 95%;
+    }
+
+    main > a {
+        align-self: center;
+    }
+    .news-container > div {
+        max-height: 450px;
+        min-height: 450px;
+        height: 100vh;
     }
 }
